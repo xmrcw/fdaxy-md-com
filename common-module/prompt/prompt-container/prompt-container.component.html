@@ -1,0 +1,3 @@
+<div class="haoren">
+ <fy-prompt *ngFor="let message of messages; let i = index" [message]="message" [index]="i" (closeMessage)="close($event)"></fy-prompt>
+</div>

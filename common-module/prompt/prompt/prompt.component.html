@@ -1,0 +1,7 @@
+<mat-card class="fy-card" [style.backgroundColor]="bgcolor" [@enterLeave]="message.options.state">
+  <span style="font-size: 16px;" *ngIf="message.title && message.title.length > 0">{{message.title}}</span><br>
+  <span style="font-size: 14px;">{{message.content}}</span>
+  <button class="fy-clear" mat-icon-button (click)="close()">
+    <mat-icon>clear</mat-icon>
+  </button>
+</mat-card>

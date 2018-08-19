@@ -1,0 +1,32 @@
+{
+  "name": "fdaxy-md-com",
+  "description": "Google Material Float Button - Implementation for Angular v4+",
+  "version": "0.0.1",
+  "main": "bundles/ngc-float-button.umd.min.js",
+  "module": "index.js",
+  "typings": "index.d.ts",
+  "keywords": [
+    "angular6",
+    "angular",
+    "angular 6",
+    "module",
+    "float",
+    "button"
+  ],
+  "author": "Gustavo Costa - @GustavoCostaW",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GustavoCostaW/ngc-float-button"
+  },
+  "homepage": "https://github.com/GustavoCostaW/ngc-float-button",
+  "bugs": {
+    "url": "https://github.com/GustavoCostaW/ngc-float-button/issues"
+  },
+  "peerDependencies": {
+    "@angular/core": "^6.0.0",
+    "@angular/material": "^6.4.5",
+    "@angular/cdk": "^6.4.5",
+    "rxjs": "^6.0.0"
+  }
+}

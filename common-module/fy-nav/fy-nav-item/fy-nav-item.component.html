@@ -1,0 +1,14 @@
+<div *ngIf="nav" (click)="navClick($event, nav)" [class.select]="nav['select']">
+  <i [style.width.px]="getIWidth()">
+    <mat-icon mat-list-icon *ngIf="iconLeftOrRight && (nav.children && nav.children.length > 0)">{{nav['nav_icon']}}</mat-icon>
+  </i>
+  <mat-icon class="fdaxy-list-icon-l" mat-list-icon>{{nav.icon ? nav.icon : (nav.children && nav.children.length > 0 ? 'star' : 'star_border')}}</mat-icon>
+  <label class="fdaxy-list-label">{{nav.name}}</label>
+  <mat-icon class="fdaxy-list-icon-r" *ngIf="!iconLeftOrRight && nav.children && nav.children.length > 0">{{nav['nav_icon']}}</mat-icon>
+  <span class="fdaxy-list-icon-r mat-warn" *ngIf="(!nav.children || nav.children.length < 1) && (nav.tips.length > 0)">{{nav.tips}}</span>
+</div>
+<ul *ngIf="hasChildren(nav)" id="nav{{nav.id}}" style="height: 0;" [@fdaxy-a-accordion]="nav['av_state']">
+  <li *ngFor="let item1 of nav.children">
+    <fy-nav-item [nav]="item1" [layer]="(layer+1)" [iconLeftOrRight]="iconLeftOrRight" (clickBtn)="clickUp($event)"></fy-nav-item>
+  </li>
+</ul>

@@ -1,0 +1,6 @@
+<div style="position: relative;">
+  <nav *ngFor="let nav of navs;">
+    <fy-nav-item [nav]="nav" [layer]="0" [iconLeftOrRight]="iconLeftOrRight" (clickBtn)="click($event)"></fy-nav-item>
+  </nav>
+</div>
+
